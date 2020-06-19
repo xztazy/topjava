@@ -5,13 +5,18 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Meal {
-    private final LocalDateTime dateTime;
 
-    private final String description;
+    private int id;
+    private  LocalDateTime dateTime;
 
-    private final int calories;
+    private  String description;
 
-    public Meal(LocalDateTime dateTime, String description, int calories) {
+    private  int calories;
+
+    public Meal() {
+    }
+
+    public Meal( LocalDateTime dateTime, String description, int calories) {
         this.dateTime = dateTime;
         this.description = description;
         this.calories = calories;
@@ -35,5 +40,13 @@ public class Meal {
 
     public LocalTime getTime() {
         return dateTime.toLocalTime();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
